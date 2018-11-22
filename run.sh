@@ -12,12 +12,22 @@ Hello, this is my website.
 </body>
 </html>" > index.html
 cd ..
-cd a/
+cd A/
 touch A.html
 echo "<html>
 Contact info: keatonhanna@yahoo.com
 </html>" > A.html
-
+cd ..
+chown -R $USER:$USER /var/www/html/index/
+chown -R $USER:$USER /var/www/html/A/
+cd 
+cd /etc/nginx/sites-available/de^C
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/index.conf
+cp /etc/nginx/sites-available/default /etc/nginx/sites-available/A.conf
+cd ..
+cd ..
+cd ..
+cd
 
 
 
